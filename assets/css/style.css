@@ -1,0 +1,514 @@
+.container {
+    background-color: #F7F5E9;
+}
+/* Header Navbar */
+.header_navbar {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Phân bổ đều khoảng cách */
+    border-top: 3px solid #324730;
+    border-bottom: 3px solid #324730;
+}
+
+.lef_header_navbar, .right_header_navbar {
+    justify-content: center; /* Căn giữa các thẻ <li> theo chiều ngang */
+    align-items: center;
+    display: flex;        /* Cho các thẻ <li> nằm ngang */
+    list-style: none;     /* Xóa dấu chấm tròn mặc định */
+    gap: 50px;            /* Tạo khoảng cách giữa các mục menu */
+    margin: 0px;
+}
+
+/* 1. Đặt thuộc tính cho thẻ li mặc định */
+.lef_header_navbar li a,
+.right_header_navbar li a{
+    padding: 30px;
+    font-size: larger;
+    font-weight: 700;
+    text-decoration: none;
+    color: #D7662F;              /* Màu chữ mặc định */
+    cursor: pointer;          /* Đổi trỏ chuột thành hình bàn tay */
+    transition: all 0.3s ease; /* Thêm hiệu ứng mượt mà */
+}
+
+/* 2. Hiệu ứng HOVER: Khi di chuột vào thẻ li */
+.lef_header_navbar li a:hover,
+.right_header_navbar li a:hover {
+  color: #324730;             /* Đổi màu chữ thành xanh lá đậm (DarkGreen) */
+  /* background-color: #f0f0f0;  /* Bạn cũng có thể đổi màu nền nếu muốn */
+}
+
+
+
+/* 1. Thẻ CHA chứa logo: Căn giữa tuyệt đối */
+.middle_header_navbar {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+/* 2. Thẻ ẢNH Logo: Đặt kích thước theo % */
+.middle_header_navbar img {
+    position: absolute;
+    width: 100px;
+    height: 100%;     
+}
+
+
+
+
+
+
+
+/* MAIN CONTENT */
+.full_content{
+    padding: 3% 0px 3% 0px;
+    display: flex;
+}
+
+
+h1{
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/* Khung chứa chính (Nền đen bo góc) */
+.full_content .righ_content {
+  background-color: #A46A3B; /* Hoặc đổi thành #324730 nếu muốn giữ tông xanh lá */
+  position: relative;
+  width: 100%;
+  height: 450px;
+  border-radius: 20px; /* Bo góc khung ngoài */
+  overflow: hidden;    /* Giữ các phần tử con nằm gọn inside khung */
+  font-family: sans-serif;
+}
+
+/* Ảnh nhân vật/món ăn (căn bên trái, tràn viền dưới) */
+.full_content .righ_content img.about_us_img {
+  position: absolute;
+  height: 90%;
+  width: auto;
+  bottom: 5%;
+  left: 5%;
+  object-fit: cover;
+  z-index: 1;
+  border-radius: 3%;
+}
+
+/* Khung chữ bên phải đè lên nền */
+.righ_content .card_text {
+    background-color: #324730a5;
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    z-index: 2;
+    text-align: right;
+    color: #fff;
+    padding-right: 3%;
+}
+
+.righ_content .card_text h2 {
+    font-size: 64px;
+    font-weight: 900;
+    font-style: italic;
+    margin: 0;
+    line-height: 1;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.righ_content .card_text .highlight {
+    font-size: 56px;
+    font-weight: 900;
+    font-style: italic;
+    margin: 10px 0 20px 0;
+    line-height: 1;
+}
+/*  */
+/* Áp dụng trực tiếp cho thẻ p trong phần About Us */
+.about_us{
+    position: relative;
+}
+.about_us p {
+  text-indent: 30px;    /* Thụt lề đầu dòng 1 khoảng (thay đổi sốpx tùy ý) */
+  text-align: justify;   /* Căn đều hai bên */
+  line-height: 1.6;      /* Thêm giãn dòng cho chữ dễ đọc hơn (nên dùng) */
+  
+}
+
+.introduction{
+    padding-top: 5%;
+}
+
+.about_us img{
+    position: absolute;
+    left: 50%;
+    bottom: 25%;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%);
+}
+
+.about_us h4{
+    margin-top: 15%;
+    text-align: right;
+    font-style: italic;
+    font-family: "Lobster", sans-serif;
+}
+
+
+
+
+/*  */
+/* 1. Khối chứa bên ngoài */
+.title_food {
+    width: 500px;
+    height: 50px;
+    background-color: #324730; /* Nền xanh lá */
+    border-radius: 10px;        /* Bo góc 10px */
+    margin: 20px auto;          /* margin: 0 auto giúp CĂN GIỮA KHỐI ra giữa trang */
+    
+    /* Dùng Flexbox để căn giữa CHỮ bên trong (trên-dưới-trái-phải) */
+    display: flex;
+    align-items: center;        /* Căn giữa theo chiều dọc */
+    justify-content: center;   /* Căn giữa theo chiều ngang */
+}
+
+/* 2. Thẻ chữ H2 bên trong */
+.title_food h2 {
+    color: #ffffff;            /* Chữ màu trắng */
+    font-family: "Lobster", sans-serif;
+    margin: 0;                 /* Bỏ margin mặc định của h2 để không bị lệch khung */
+    font-size: 30px;           /* Kích thước chữ vừa vặn với khung 50px */
+}
+
+.title_food{
+    position: relative;
+}
+
+.title_food img:first-child{
+    position: absolute;
+    left: 1%;
+    width: 60px;
+    height: 51px;
+    transform: translate(-50%);
+}
+
+.title_food img:last-child{
+position: absolute;
+    right: -10%;
+    width: 60px;
+    height: 51px;
+    transform: translate(-50%);
+}
+
+.box_sandwich,
+.box_salad{
+    position: relative;
+    width: 100%;
+    height: 370px;
+    border: 3px solid #324730;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* căn giữa theo chiều ngang */
+    justify-content: center;  /* căn giữa theo chiều dọc */
+    text-align: center;       /* để chữ trong h3/p cũng canh giữa */
+    box-shadow: 10px 10px 0px 0px #324730;
+}
+
+.box_nuocep{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    border: 3px solid #324730;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* căn giữa theo chiều ngang */
+    justify-content: center;  /* căn giữa theo chiều dọc */
+    text-align: center;       /* để chữ trong h3/p cũng canh giữa */
+    box-shadow: 10px 10px 0px 0px #324730;
+}
+
+/* 1. Thiết lập cho khung của box_sandwich (đoạn code gốc của bạn, có sửa đổi) */
+.box_sandwich img, /* Đoạn này bạn giữ nguyên để định vị box nếu cần */
+.box_salad img, /* Đoạn này bạn giữ nguyên để định vị box nếu cần */
+.box_nuocep img { /* Đoạn này bạn giữ nguyên để định vị box nếu cần */
+    margin: 0px 0px 5% 0px;
+}
+/* 2. Thiết lập cho THẺ BỌC (Khung cố định) */
+.box_sandwich .img-wrapper{
+    width: 220px;
+    height: 210px;
+    border-radius: 10px; /* Bo góc cho khung */
+    overflow: hidden;    /* QUAN TRỌNG: Ẩn phần ảnh thừa khi zoom */
+    display: flex;       /* Để căn giữa ảnh nếu cần */
+    align-items: center;
+    justify-content: center;
+}
+
+.box_salad .img-wrapper{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box_nuocep .img-wrapper{
+    width: 250px;
+    height: 270px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 3. Thiết lập cho HÌNH ẢNH bên trong (Tạo hiệu ứng ZOOM) */
+.box_sandwich .img-wrapper img{
+    /* Đặt kích thước ban đầu của ảnh bằng với khung */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giữ tỷ lệ ảnh */
+
+    /* Tạo hiệu ứng ZOOM: Tăng tỷ lệ scale */
+    transform: scale(1.3); /* Zoom lên 1.3 lần (30%). Bạn có thể tăng giảm số này */
+
+    /* Tùy chọn: Thêm hiệu ứng chuyển động mượt mà khi zoom */
+    transition: transform 0.3s ease;
+}
+
+
+.box_salad .img-wrapper img {
+    /* Đặt kích thước ban đầu của ảnh bằng với khung */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giữ tỷ lệ ảnh */
+
+    /* Tạo hiệu ứng ZOOM: Tăng tỷ lệ scale */
+    transform: scale(1.0); /* Zoom lên 1.3 lần (30%). Bạn có thể tăng giảm số này */
+
+    /* Tùy chọn: Thêm hiệu ứng chuyển động mượt mà khi zoom */
+    transition: transform 0.3s ease;
+}
+
+.box_nuocep .img-wrapper img {
+    /* Đặt kích thước ban đầu của ảnh bằng với khung */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giữ tỷ lệ ảnh */
+
+    /* Tạo hiệu ứng ZOOM: Tăng tỷ lệ scale */
+    transform: scale(0.9); /* Zoom lên 1.3 lần (30%). Bạn có thể tăng giảm số này */
+
+    /* Tùy chọn: Thêm hiệu ứng chuyển động mượt mà khi zoom */
+    transition: transform 0.3s ease;
+}
+
+.box_sandwich .must_try img,
+.box_salad .must_try img,
+.box_nuocep .must_try img{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 0px;
+    top: 24px;
+    margin: 0px;
+    transform: translate(-8%, -20%);
+}
+
+.box_sandwich .comment p,
+.box_salad .comment p,
+.box_nuocep .comment p{
+    color: #A46A3B;
+    font-size: 13px;
+    margin: 0px;
+    padding: 5% 0px 5% 0px;
+    font-weight: 600;
+}
+
+.box_sandwich h4,
+.box_salad h4,
+.box_nuocep h4{
+    padding: 2% 0px 0px 0px;
+    color:  #324730;
+    text-decoration: underline;
+    margin: 0px;
+}
+
+.box_sandwich p,
+.box_salad p,
+.box_nuocep p{
+    color:  #324730;
+}
+
+
+.box_sandwich .cost,
+.box_salad .cost,
+.box_nuocep .cost{
+    display: flex;
+    align-items: center;       /* thêm: canh giữa p và button theo chiều dọc */
+    justify-content: center;   /* thêm: canh giữa cả cụm theo chiều ngang trong card */
+    gap: 20px;
+}
+
+.box_sandwich .cost .money,
+.box_salad .cost .money,
+.box_nuocep .cost .money{
+    border-radius: 10px;
+    padding: 5px 15px 5px 15px;
+    border: 2px solid #324730;
+}
+
+.box_sandwich .cost p,
+.box_salad .cost p,
+.box_nuocep .cost p{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.box_sandwich .cost button,
+.box_salad .cost button,
+.box_nuocep .cost button{
+    padding: 5px 15px 5px 15px;
+    background-color: #324730;
+    border-radius: 10px;
+    border: 2px solid #A46A3B;
+    justify-content: center;
+    transition: all 0.2s ease; 
+}
+
+.box_sandwich .cost button:hover,
+.box_salad .cost button:hover,
+.box_nuocep .cost button:hover{
+    padding: 5px 15px 5px 15px;
+    background-color: #F7F5E9;
+    border-radius: 10px;
+    border: 2px solid #324730;
+    justify-content: center;
+}
+
+
+.box_sandwich .cost button:hover p,
+.box_salad .cost button:hover p,
+.box_nuocep .cost button:hover p{
+    color: #324730;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+.box_sandwich .cost button p,
+.box_salad .cost button p,
+.box_nuocep .cost button p{
+    color: #F7F5E9;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 0.2s ease; 
+}
+
+
+.full_content2{
+    padding-bottom: 3%;
+}
+
+
+
+
+.title_comment {
+    width: 350px;              /* Có thể chỉnh lại chiều rộng tùy giao diện */
+    height: 35px;
+    background-color: #324730; /* Nền xanh lá */
+    border-radius: 10px;       /* Bo góc */
+    margin: 30px auto;         /* Căn giữa khối theo chiều ngang & tạo khoảng cách trên/dưới */
+    
+    /* Flexbox căn giữa chữ bên trong */
+    display: flex;
+    align-items: center;       
+    justify-content: center;   
+}
+
+.title_comment p {
+    color: #ffffff;            /* Chữ màu trắng */
+    font-weight: bold;         /* In đậm chữ */
+    font-size: 18px;           /* Kích thước chữ */
+    margin: 0;                 /* Xóa margin mặc định của thẻ p */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* ============================= */
+/* QR CODE MODAL (Buy now) */
+/* ============================= */
+.qr-modal-content {
+    border-radius: 20px;
+    border: 3px solid #324730;
+    background-color: #F7F5E9;
+}
+
+.qr-modal-content .modal-header {
+    border-bottom: 2px solid #324730;
+}
+
+.qr-modal-content .modal-title {
+    font-family: "Lobster", sans-serif;
+    color: #324730;
+    font-size: 24px;
+}
+
+.qr-modal-content .close {
+    color: #324730;
+    opacity: 1;
+    text-shadow: none;
+}
+
+.qr-modal-content .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-image {
+    display: block;
+    margin: 0 auto 15px auto;
+    border: 3px solid #324730;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.qr-caption {
+    color: #A46A3B;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.qr-link {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #324730;
+    color: #F7F5E9 !important;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.qr-link:hover {
+    background-color: #F7F5E9;
+    color: #324730 !important;
+    border-color: #324730;
+}
