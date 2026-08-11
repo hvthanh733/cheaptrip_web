@@ -129,6 +129,7 @@ select {
 
 /* Respect user's motion preferences */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -139,10 +140,17 @@ select {
   }
 }
 
-body{
+body {
   background-color: #F7F5E9;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+html, body {
+  background-color: #F7F5E9; /* Thay mã màu của bạn vào đây */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
