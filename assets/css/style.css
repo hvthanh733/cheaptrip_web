@@ -216,7 +216,7 @@ position: absolute;
     align-items: center;      /* căn giữa theo chiều ngang */
     justify-content: center;  /* căn giữa theo chiều dọc */
     text-align: center;       /* để chữ trong h3/p cũng canh giữa */
-    box-shadow: 10px 10px 0px 0px #324730;
+    box-shadow: 5px 5px 0px 0px #324730;
 }
 
 .box_nuocep{
@@ -230,7 +230,7 @@ position: absolute;
     align-items: center;      /* căn giữa theo chiều ngang */
     justify-content: center;  /* căn giữa theo chiều dọc */
     text-align: center;       /* để chữ trong h3/p cũng canh giữa */
-    box-shadow: 10px 10px 0px 0px #324730;
+    box-shadow: 5px 5px 0px 0px #324730;
 }
 
 /* 1. Thiết lập cho khung của box_sandwich (đoạn code gốc của bạn, có sửa đổi) */
