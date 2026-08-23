@@ -1,0 +1,32 @@
+/* 1. Ẩn thanh cuộn trên Firefox và IE/Edge */
+html, body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #F7F5E9;
+  
+  /* Ẩn scrollbar */
+  -ms-overflow-style: none;  /* IE và Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* 2. Ẩn thanh cuộn trên Chrome, Safari, Opera, Brave */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* 3. Cấu hình hình nền body vừa vặn chuẩn */
+body {
+  background-image: url('../img/bg/bg1.png');
+  background-size: cover;          /* Vừa vặn phủ kín màn hình */
+  background-position: center;      /* Căn giữa */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* 4. Triệt tiêu hoàn toàn padding mà Bootstrap tự thêm khi bật Modal */
+body.modal-open {
+  padding-right: 0px !important;
+  overflow: auto !important;
+}

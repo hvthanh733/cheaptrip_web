@@ -6,7 +6,7 @@
   <title>Cheaptrip</title>
   <link rel="icon" type="image/jpeg" href="./assets/img/logo.jpg">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
+  <script src="https://kit.fontawesome.com/46329671cb.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -14,6 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/scroll.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
@@ -39,7 +40,7 @@
         <div class="col-5">
           <ul class="right_header_navbar">
             <li><a href="#">Feedback</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact_us">Contact us</a></li>
           </ul>
 
         </div>
@@ -52,7 +53,7 @@
           <div class="col-6 about_us">
             <h1>About us</h1>
             <div class="introduction">
-              <p>Xin chào cả nhà, mình tên là M.Hằng!
+              <p>Xin chào cả nhà, mình tên là <span>M.Hằng!</span>
                 Với tình yêu dành cho lối sống lành mạnh, mình gửi gắm trọn vẹn vào từng phần ăn clean & healthy tại CheapTrip Foods. Vì shop mới mở còn nhiều bỡ ngỡ, mình rất mong nhận được sự thương yêu và ủng hộ của mọi người. Ghé menu dùng thử bữa ăn nhà làm cùng M.Hằng nhé!</p>
               <p>
                 Vì shop mới mở nên mình rất mong nhận được sự thương yêu, ủng hộ và góp ý chân thành từ mọi người ạ!
@@ -65,7 +66,9 @@
             <div class="righ_content">
               <!-- Ảnh nền/nhân vật -->
               <img src="../assets/img/about_us.jpg" alt="About Us" class="about_us_img">
-              
+              <img src="../assets/img/icon_aboutus.png" alt="" class="icon_aboutus_img">
+              <img src="../assets/img/mayones.png" alt="About Us" class="mayones_img">
+
               <!-- Phần chữ đè lên ảnh -->
               <div class="card_text">
                 <h2>New day</h2>
@@ -407,11 +410,9 @@
           </div>
         </div>
       </div>
-
     </section>
 
-    <!-- QR Code Modal: hiện khi bấm Buy now -->
-    <div class="modal fade" id="qrModal" tabindex="-1" role="dialog" aria-labelledby="qrModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="qrModal" tabindex="-1" role="dialog" aria-labelledby="qrModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content qr-modal-content">
           <div class="modal-header">
@@ -427,14 +428,96 @@
           </div>
         </div>
       </div>
-    </div>
-    
-
-    <section class="footer">
-      <div class="container">
-          <p></p>
+    </div> -->
+    <!-- Modal Đặt Hàng / QR Code Bootstrap 4 -->
+<div class="modal fade" id="qrModal" tabindex="-1" role="dialog" aria-labelledby="qrModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content qr-modal-content">
+      
+      <div class="modal-header">
+        <h5 class="modal-title" id="qrModalLabel">Đặt hàng qua Instagram</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
+
+      <div class="modal-body text-center">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Fwww.instagram.com%2Fmhang.doc%2F" alt="QR Instagram CheapTrip Foods" class="qr-image">
+        <p class="qr-caption">Quét mã hoặc bấm vào link bên dưới để nhắn tin đặt hàng nhé!</p>
+        <a href="https://www.instagram.com/mhang.doc/" target="_blank" rel="noopener" class="qr-link">@mhang.doc</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <section class="footer" id="contact_us">
+      <div class="row contact_us align-items-center">
+        
+        <!-- Cột bên trái: Contact & Hours -->
+        <div class="col-4">
+          <div class="footer_left">
+            <div class="footer_block">
+              <h4>Contact Us</h4>
+              <div class="content">
+                <i class="fa-solid fa-phone"></i>
+                <span>: 0936800210</span>
+              </div>
+            </div>
+
+            <div class="footer_block">
+              <h4>Cheaptrip Hours</h4>
+              <div class="content">
+                <i class="fa-regular fa-clock"></i>
+                <span>: 7am - 8pm</span>
+              </div>
+              <div class="content">
+                <i class="fa-regular fa-calendar-days"></i>
+                <span>: Monday - Friday</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột giữa: Logo -->
+        <div class="col-4 position-relative">
+          <div class="footer_logo circular-frame">
+            <img src="../assets/img/logo.jpg" alt="Logo CheapTrip Foods">
+          </div>
+        </div>
+
+        <!-- Cột bên phải: Social Media -->
+        <div class="col-4">
+          <div class="footer_right">
+            <div class="footer_block">
+              <h4>Social Media</h4>
+              <div class="content">
+                <i class="fa-brands fa-facebook"></i>
+                <span>: <a href="https://www.facebook.com/nhuyduong99">Hang Minh Truong</a></span>
+              </div>
+              <div class="content">
+                <i class="fa-brands fa-instagram"></i>
+                <span>: <a href="https://www.instagram.com/mhang.doc/">mhang.doc (em yeu)</a></span>
+              </div>
+              <div class="content">
+                <i class="fa-brands fa-threads"></i>
+                <span>: <a href="https://www.threads.com/@mhang.doc?xmt=AQG0yoXYbHL88ka_rG69coNPRqfh9H3HJmk-dkdNhGSy-Gk">mhang.doc</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>  
     </section>
+   
+    <!-- <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const contactSection = document.getElementById('contact_us');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    </script> -->
   </div>
 
   

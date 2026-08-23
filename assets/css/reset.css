@@ -149,7 +149,7 @@ html {
 }
 
 html, body {
-  background-color: #F7F5E9; /* Thay mã màu của bạn vào đây */
+  background-color: #F7F5E9;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -157,18 +157,23 @@ html, body {
 
 body {
   background-image: url('../img/bg/bg1.png');
-  background-size: cover;          /* Phủ kín toàn bộ màn hình */
-  background-position: center;      /* Căn giữa hình nền */
-  background-repeat: no-repeat;     /* Không lặp lại hình ảnh */
-  background-attachment: fixed;     /* Giữ cố định nền khi cuộn trang */
-  min-height: 100vh;                /* Đảm bảo chiều cao phủ hết màn hình */
-  margin: 0;                        /* Xóa lề mặc định của browser */
+  background-size: cover;          
+  background-position: center;      
+  background-repeat: no-repeat;     
+  background-attachment: fixed;    
+  min-height: 100vh;               
+  margin: 0;                        
 }
-html {
-  zoom: 96%;
+.container {
+  padding: 0px;
+  box-shadow:  6px 0px 8px 0px #E5DDCA, -6px 0px 8px 0px #E5DDCA;
 }
 
-.container {
-  /* Bóng bên phải (5px 0) và bóng bên trái (-5px 0) */
-  box-shadow:  6px 0px 8px 0px #E5DDCA, -6px 0px 8px 0px #E5DDCA
+.main-content{
+  padding: 0px 2% 0px 2%;
 }
+
+
+
+
+
