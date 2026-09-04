@@ -10,6 +10,7 @@ const connectDB = async () => {
         bufferCommands: false,
     });
 
+    console.log("Connect Database successfully");
     return cacheDb;
 };
 
